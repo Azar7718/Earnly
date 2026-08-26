@@ -59,5 +59,6 @@ const server=http.createServer(async(req,res)=>{
     }
     return send(res,404,{error:'Not found'});
   }catch(e){send(res,500,{error:'Server error'})}
-});
-se server.listen(process.env.PORT || 3000, '0.0.0.0', ()=>console.log('Earnly server running'));
+
+server.listen(process.env.PORT || 3000, '0.0.0.0', ()=>console.log('Earnly server running'));
+  
