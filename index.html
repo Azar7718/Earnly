@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Earnly — Tasks & Rewards</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#f5f7fb;color:#172033}
+header{background:#fff;border-bottom:1px solid #e7eaf0;padding:16px 5%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:24px;font-weight:800}.logo span{color:#5b5cf0}
+button{border:0;border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer;background:#5b5cf0;color:#fff}
+.hero{padding:55px 5%;background:linear-gradient(135deg,#5b5cf0,#7d5cff);color:#fff}
+.hero h1{font-size:42px;margin:0 0 10px}.hero p{font-size:18px;max-width:650px;opacity:.9}
+.container{max-width:1100px;margin:auto;padding:28px 5%}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#fff;padding:22px;border-radius:16px;box-shadow:0 5px 20px #1820400d}.amount{font-size:28px;font-weight:800}
+.tasks{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}.task{display:flex;justify-content:space-between;align-items:center}
+.small{color:#697386;font-size:14px}.reward{color:#16834b;font-weight:800}
+@media(max-width:700px){.cards,.tasks{grid-template-columns:1fr}.hero h1{font-size:32px}}
+</style>
+</head>
+<body>
+<header><div class="logo">Earn<span>ly</span></div><button onclick="alert('Login/Register screen can be connected here.')">Login</button></header>
+
+<section class="hero">
+<div class="container">
+<h1>Complete tasks. Earn rewards.</h1>
+<p>A transparent rewards platform where users complete legitimate tasks and businesses reach real customers.</p>
+<button onclick="document.getElementById('tasks').scrollIntoView()">Explore Tasks</button>
+</div>
+</section>
+
+<main class="container">
+<h2>How it works</h2>
+<div class="cards">
+<div class="card"><div class="amount">01</div><h3>Choose a task</h3><p class="small">Pick an available task with clear requirements and reward.</p></div>
+<div class="card"><div class="amount">02</div><h3>Complete it</h3><p class="small">Submit the required proof or result honestly.</p></div>
+<div class="card"><div class="amount">03</div><h3>Get rewarded</h3><p class="small">Approved rewards are added to your wallet.</p></div>
+</div>
+
+<h2 id="tasks" style="margin-top:40px">Available Tasks</h2>
+<div class="tasks">
+<div class="card task"><div><h3>Product feedback</h3><p class="small">Share feedback on a product experience</p></div><div><div class="reward">₹25</div><button onclick="claim(25)">Start</button></div></div>
+<div class="card task"><div><h3>Content review</h3><p class="small">Review a short piece of content</p></div><div><div class="reward">₹15</div><button onclick="claim(15)">Start</button></div></div>
+<div class="card task"><div><h3>Referral</h3><p class="small">Invite a genuine new user</p></div><div><div class="reward">₹50</div><button onclick="claim(50)">Start</button></div></div>
+<div class="card task"><div><h3>Survey</h3><p class="small">Complete a clearly disclosed survey</p></div><div><div class="reward">₹30</div><button onclick="claim(30)">Start</button></div></div>
+</div>
+
+<div class="card" style="margin-top:28px">
+<h2>Demo Wallet</h2><p class="small">Prototype balance (not real money)</p>
+<div class="amount">₹<span id="balance">0</span></div>
+<button onclick="withdraw()">Withdrawal</button>
+</div>
+</main>
+
+<script>
+let balance=0;
+function claim(x){balance+=x;document.getElementById('balance').textContent=balance;alert('Demo task completed. ₹'+x+' added to prototype balance.');}
+function withdraw(){alert('Demo only: connect a secure backend and verified payout provider before handling real money.');}
+</script>
+</body>
+</html>
