@@ -1,5 +1,36 @@
 {
   "users": [],
-  "tasks": [],
+  "tasks": [
+    {
+      "id": "t1",
+      "title": "Product Feedback",
+      "description": "Share genuine feedback on a product experience.",
+      "reward": 100
+    },
+    {
+      "id": "t2",
+      "title": "Content Review",
+      "description": "Review a short piece of content honestly.",
+      "reward": 75
+    },
+    {
+      "id": "t3",
+      "title": "Survey",
+      "description": "Complete a clearly disclosed survey.",
+      "reward": 125
+    },
+    {
+      "id": "t4",
+      "title": "App Experience",
+      "description": "Share genuine feedback about an app experience.",
+      "reward": 50
+    },
+    {
+      "id": "t5",
+      "title": "Website Review",
+      "description": "Give genuine feedback about a website.",
+      "reward": 150
+    }
+  ],
   "withdrawals": []
 }
